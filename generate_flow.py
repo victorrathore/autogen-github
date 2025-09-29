@@ -17,7 +17,7 @@ if not api_key:
 
 #  Config 
 REPO_PATH = os.path.dirname(os.path.abspath(__file__))
-REPO_URL = "https://github.com/victorrathore/autogen-github-site.git"  # your repo
+REPO_URL = "https://github.com/victorrathore/autogen-github.git"  # your repo
 INDEX_FILE = os.path.join(REPO_PATH, "index.html")
 
 #  Ensure index.html exists 
