@@ -1,4 +1,4 @@
-name: Deploy Static HTML
+name: Deploy Static HTML Site
 
 on:
   push:
@@ -8,13 +8,12 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
+      - name: Check out the repository
+        uses: actions/checkout@v3
 
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./path-to-your-html-files  # Change this to the directory containing your HTML files
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          publish_dir: ./  # Adjust this if your HTML files are in a specific directory
+          github_token: ${{ secrets.GITHUB_TOKEN }}
